@@ -34,9 +34,21 @@ export class AppComponent implements OnInit{
     this.getData()
     
   }
+
+
+  submitForm(data:FormGroup){
+    this.searchItem=false
+console.log(data.value);
+this.empolyee.submitForm(data.value).subscribe((res)=>{
+  console.log(res);
+this.getData()
+  
+})
+
   addEmp(){
     this.view=true
   }
+
 
 
   }
